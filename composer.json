@@ -1,0 +1,11 @@
+{
+    "require": {
+        "guzzlehttp/guzzle": "^7.8",
+        "phpfastcache/phpfastcache": "^9.1"
+    },
+    "autoload": {
+		"psr-4": {
+			"DonationDaddy\\": "src"
+		}
+	}
+}
