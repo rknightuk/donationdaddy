@@ -28,6 +28,7 @@ class Config {
                 'key' => self::SITE_COINME,
                 'url' => 'https://coinme.dad',
                 'title' => 'Coin Me, Daddy',
+                'page_title' => 'Help someone out who needs just one dollar to get a Relay FM for St Jude challenge coin',
                 'tagline' => 'Help someone out who needs just one dollar to get a {{ RELAYLINK }} challenge coin',
                 'countText' => '<p class="center"><strong>{{ COUNT }} people already raised enough for a coin!</strong></p>',
                 'styles' => "
@@ -162,6 +163,7 @@ class Config {
                 'key' => self::SITE_DESKMAT,
                 'url' => 'https://deskmat.help',
                 'title' => 'Desk Mat Help',
+                'page_title' => 'Help someone out who needs just one dollar to get a Relay FM for St Jude desk mat',
                 'tagline' => 'Help someone out who is close to getting a {{ RELAYLINK }} desk mat',
                 'formatter' => function ($data) {
                     $count = 0;
@@ -345,6 +347,7 @@ class Config {
                 'key' => self::SITE_SEPT,
                 'url' => 'https://septembed.rknight.me',
                 'title' => 'Septembed',
+                'page_title' => 'Embed your Relay FM for St Jude campaign on your website', 
                 'tagline' => 'Embed your {{ RELAYLINK }} campaign on your website', 
                 'formatter' => function($data) {
                     $content = "
@@ -376,6 +379,7 @@ class Config {
                 'key' => self::SITE_DD,
                 'url' => 'https://donationdaddy.rknight.me',
                 'title' => 'Donation Daddy',
+                'page_title' => 'Be a Donation Daddy Today!',
                 'tagline' => 'Be a Donation Daddy today!',
                 'formatter' => function($data) {
                     return [

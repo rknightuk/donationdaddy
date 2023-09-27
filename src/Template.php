@@ -168,11 +168,11 @@ class Template {
                     $styles
                 </style>
 
-                <title>$title - $tagline</title>
+                <title>$title - $page_title</title>
 
                 <meta property='og:title' content='$title' />
-                <meta property='description' content='$title - $tagline' />
-                <meta property='og:description' content='$title - $tagline' />
+                <meta property='description' content='$title - $page_title' />
+                <meta property='og:description' content='$title - $page_title' />
                 <meta property='og:type' content='article' />
                 <meta property='og:url' content='$url' />
                 <meta property='og:image' content='/icons/$key/preview.png'>
