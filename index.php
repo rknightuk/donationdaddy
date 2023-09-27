@@ -6,7 +6,6 @@ use DonationDaddy\Config;
 use DonationDaddy\Template;
 
 $site = $_SERVER['HTTP_HOST'];
-$site = $_GET['site'];
 
 switch ($site) {
     case 'coinme.dad':
