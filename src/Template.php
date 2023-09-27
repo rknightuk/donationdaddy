@@ -189,7 +189,7 @@ class Template {
                 <link rel='preconnect' href='https://fonts.bunny.net'>
                 <link href='https://fonts.bunny.net/css?family=atkinson-hyperlegible:400,400i,700,700i|bungee-shade:400' rel='stylesheet' />
 
-                <!-- todo fathom -->
+                <script src='https://cdn.usefathom.com/script.js' data-site='OQIRZXWS' defer></script>
 
             </head>
 
