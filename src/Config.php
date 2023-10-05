@@ -163,7 +163,7 @@ class Config {
                 'key' => self::SITE_DESKMAT,
                 'url' => 'https://deskmat.help',
                 'title' => 'Desk Mat Help',
-                'page_title' => 'Help someone out who needs just one dollar to get a Relay FM for St Jude desk mat',
+                'page_title' => 'Help someone out who is close to getting a Relay FM for St Jude desk mat',
                 'tagline' => 'Help someone out who is close to getting a {{ RELAYLINK }} desk mat',
                 'formatter' => function ($data) {
                     $count = 0;
