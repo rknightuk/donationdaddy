@@ -1,0 +1,86 @@
+{
+  "name": "Relay FM for St. Jude 2023",
+  "user": "Relay FM",
+  "description": "The Relay FM community has raised over $2.5 million for St. Jude since 2019. This year, we're going to the moon!",
+  "url": "https://relay.experience.stjude.org/",
+  "avatar": "https://assets.tiltify.com/uploads/team_event/avatar/3d9db077-f62a-4492-a68c-6c489f193bcf/blob-93c247af-48a2-4eed-a841-9498ec43c12c.jpeg",
+  "raised": "774262.53",
+  "goal": "500000",
+  "percentage": "154.85",
+  "milestones": [
+    {
+      "name": "Unlock Jason coin flips",
+      "amount": "430000"
+    },
+    {
+      "name": "Unlock LCD Bowling",
+      "amount": "425000"
+    },
+    {
+      "name": "Unlock Polaris Dawn Interview",
+      "amount": "415000"
+    },
+    {
+      "name": "Myke Builds the LEGO Concorde",
+      "amount": "450000"
+    },
+    {
+      "name": "Mystery MacBook Project, Part 2",
+      "amount": "375000"
+    },
+    {
+      "name": "Desk Tour (Brad's Version)",
+      "amount": "293000"
+    },
+    {
+      "name": "Kathy & Jay Play Baldur's Gate 3",
+      "amount": "275000"
+    },
+    {
+      "name": "Unlock \"Stephen IDs iPhones by Touch\" Video",
+      "amount": "200000"
+    },
+    {
+      "name": "Myke Audits Stephen's Mac",
+      "amount": "250000"
+    },
+    {
+      "name": "Stephen's Apple Collection Tour (THE CURATOUR)",
+      "amount": "125000"
+    },
+    {
+      "name": "Myke's Desk Tour",
+      "amount": "85000"
+    },
+    {
+      "name": "Myke plays Starfield",
+      "amount": "5000"
+    },
+    {
+      "name": "Stephen builds LEGO Mars rover",
+      "amount": "40000"
+    },
+    {
+      "name": "Myke & Stephen play Flight Sim",
+      "amount": "75000"
+    },
+    {
+      "name": "Stephen Disassembles a MacBook From Memory",
+      "amount": "15000"
+    }
+  ],
+  "rewards": [
+    {
+      "name": "Relay FM Digital Bundle",
+      "description": "Make an individual gift of $60 or more to earn exclusive Wallpapers and macOS Screensaver",
+      "image": "https://assets.tiltify.com/uploads/reward/image/206521/blob-1fea5a08-5976-466d-945f-3f576248d188.png",
+      "amount": "60.00"
+    },
+    {
+      "name": "Sticker Pack + Digital Bundle",
+      "description": "Make an individual gift of $100 or more to earn the Sticker Pack plus the entire Digital Bundle.",
+      "image": "https://assets.tiltify.com/uploads/reward/image/206523/blob-03fadf02-0f52-440a-be14-e5adc11ca197.png",
+      "amount": "100.00"
+    }
+  ]
+}

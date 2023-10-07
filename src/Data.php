@@ -8,6 +8,8 @@ use Phpfastcache\Helper\Psr16Adapter;
 class Data {
   public static function campaigns()
   {
+    return json_decode(file_get_contents('./static/2023/campaigns.json'), true);
+
     $VANITY = '+relay-fm';
     $SLUG = 'relay-fm-for-st-jude-2023';
 
@@ -139,6 +141,8 @@ supportingCampaigns(first: $limit, after: $cursor) {
 
   public static function relay()
   {
+    return json_decode(file_get_contents('./static/2023/relay.json'), true);
+
     $Psr16Adapter = new Psr16Adapter('Files');
     $key = 'cache_key_relay_campaign';
 

@@ -269,7 +269,7 @@ class Config {
             self::SITE_TREAT => [
                 'key' => self::SITE_TREAT,
                 'url' => 'https://donationtreats.rknight.me',
-                'title' => 'Donation treats',
+                'title' => 'Donation treats - Donate some money, get a treat',
                 'tagline' => 'Donate some money, get a treat',
                 'countText' => '<p class="center"><strong>{{ COUNT }} different rewards available!</strong></p>',
                 'formatter' => function ($data) {
@@ -355,11 +355,11 @@ class Config {
 
                         <pre>&lt;script src='https://septembed.rknight.me/sj.js?u=<strong>https://tiltify.com/@rknightuk/stjude2023</strong>'&gt;&lt;/script&gt;</pre>
                         
-                        <p>Example with my campaign:</p>
+                        <p>Example:</p>
 
                         <br>
 
-                        <script src='/sj.js?u=https://tiltify.com/@rknightuk/stjude2023'></script>
+                        <script src='/sj.js'></script>
 
                         <p style='margin-top: 20px;'><em><small>If you get the URL wrong, the embed will fall back to using the main Relay FM campaign. If you always want to show the Relay campaign, don't pass anything to <code>u=</code>.</small></em></p>
                     ";
@@ -400,11 +400,6 @@ class Config {
         $formatted = $siteConfig['formatter'](Data::campaigns());
         $siteConfig['content'] = $formatted[0];
         $siteConfig['count'] = $formatted[1];
-
-        if ($siteConfig['count'] === 0)
-        {
-            var_dump('hello');
-        }
 
         return $siteConfig;
     }

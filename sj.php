@@ -434,6 +434,10 @@ $vanity = $_GET['vanity'] ?? null;
 $key = str_replace('@', '', $vanity . $slug) ?: 'relayfmmaincampaign';
 $Psr16Adapter = new Psr16Adapter('Files');
 
+// return relay always
+echo json_encode(getRelay());
+die;
+
 if (!$Psr16Adapter->has($key)) {
     if (is_null($vanity) || is_null($slug)) {
         echo json_encode(getRelay());
