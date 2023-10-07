@@ -115,7 +115,7 @@ fetch(septembedPath)
 
     styles = document.createElement('style')
     styles.innerHTML = septembedStylesheet
-    styles.innerHTML += septembedThemes[data.mode]
+    styles.innerHTML += septembedThemes.light
 
     septembedCurrentScript.parentNode.insertBefore(styles, septembedCurrentScript)
     septembedCurrentScript.parentNode.insertBefore(container, septembedCurrentScript)
