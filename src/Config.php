@@ -269,7 +269,7 @@ class Config {
             self::SITE_TREAT => [
                 'key' => self::SITE_TREAT,
                 'url' => 'https://donationtreats.rknight.me',
-                'title' => 'Donation treats - Donate some money, get a treat',
+                'title' => 'Donation treats',
                 'tagline' => 'Donate some money, get a treat',
                 'countText' => '<p class="center"><strong>{{ COUNT }} different rewards available!</strong></p>',
                 'formatter' => function ($data) {
