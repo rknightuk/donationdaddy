@@ -83,13 +83,13 @@ class Template {
                         font-family: Atkinson Hyperlegible, sans-serif;
                         font-size: 1.2em;
                         background-color: #ecf0f1;
-                        color: black;
+                        color: #343a40;
                     }
 
                     h1 {
-                        font-size: 2.2em;
+                        font-size: 2em;
                         margin-bottom: 0;
-                        font-family: 'Bungee Shade', display;
+                        font-family: 'Press Start 2P', display;
                     }
 
                     .subtitle {
@@ -117,7 +117,7 @@ class Template {
                         grid-template-columns: repeat(4, 1fr);
                         grid-gap: 5px;
                         font-weight: 700;
-                        font-size: 1.3em;
+                        font-size: 1em;
                         padding: 10px;
                     }
 
@@ -133,12 +133,13 @@ class Template {
                         text-align: center;
                         padding: 5px;
                         text-decoration: none;
-                        font-family: 'Bungee Shade', display;
+                        font-family: 'Press Start 2P', display;
                         border: 2px solid black;
                         display: flex;
                         align-items: center;
                         justify-content: center;
                         background-color: #fce18c;
+                        color: #343a40;
                     }
 
                     nav.main a:hover {
@@ -187,7 +188,7 @@ class Template {
                 <link rel='icon' type='image/x-icon' href='/icons/$key/favicon.ico'>
 
                 <link rel='preconnect' href='https://fonts.bunny.net'>
-                <link href='https://fonts.bunny.net/css?family=atkinson-hyperlegible:400,400i,700,700i|bungee-shade:400' rel='stylesheet' />
+                <link href='https://fonts.bunny.net/css?family=atkinson-hyperlegible:400,400i,700,700i|press-start-2p:400' rel='stylesheet' />
 
                 <script src='https://cdn.usefathom.com/script.js' data-site='OQIRZXWS' defer></script>
 
@@ -221,7 +222,7 @@ class Template {
                     </script>
 
                     <footer>
-                        <a href='https://github.com/rknightuk/donationdaddy'><img src='icons/donationdaddy/DonationDaddy.png' height='50'></a>
+                        <a href='https://donationdaddy.rknight.me'><img src='icons/donationdaddy/DonationDaddy.png' height='50'></a>
                     </footer>
                 </div>
             </body>

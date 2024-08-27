@@ -13,7 +13,7 @@ class Config {
     const REPLACERS = [
         [
             'find' => '{{ RELAYLINK }}',
-            'replace' => '<a href="https://relay.experience.stjude.org/">Relay FM for St Jude</a>',
+            'replace' => '<a href="https://stjude.tiltify.com/relay-for-st-jude">Relay for St Jude</a>',
         ],
         [
             'find' => '{{ COUNT }}',
@@ -28,7 +28,7 @@ class Config {
                 'key' => self::SITE_COINME,
                 'url' => 'https://coinme.dad',
                 'title' => 'Coin Me, Daddy',
-                'page_title' => 'Help someone out who needs just one dollar to get a Relay FM for St Jude challenge coin',
+                'page_title' => 'Help someone out who needs just one dollar to get a Relay for St Jude challenge coin',
                 'tagline' => 'Help someone out who needs just one dollar to get a {{ RELAYLINK }} challenge coin',
                 'countText' => '<p class="center"><strong>{{ COUNT }} people already raised enough for a coin!</strong></p>',
                 'styles' => "
@@ -121,10 +121,11 @@ class Config {
                         <img id='coin2' class='coin2' style='max-width:50%;max-height:250px;' src='icons/coinme/coin2-trim.png'>
                     </div>
                 ",
-                'emptyState' => "
-                    <p class='center'>🎉 Every campaign has earned at least one dollar and a coin! 🎉</p>
-                    <p class='center'>💸 Why not help someone out who needs a <a href='https://deskmat.help'>desk mat?</a> 💸</p>
-                ",
+                'emptyState' => "",
+                // 'emptyState' => "
+                //     <p class='center'>🎉 Every campaign has earned at least one dollar and a coin! 🎉</p>
+                //     <p class='center'>💸 Why not help someone out who needs a <a href='https://deskmat.help'>desk mat?</a> 💸</p>
+                // ",
                 'scripts' => "
                     (function() {
                         isEmpty = !Array.from(document.getElementsByClassName('sj-container')).length
@@ -256,10 +257,18 @@ class Config {
                         color: white;
                         text-align: left;
                     }
+
+                    .deskmat {
+                        margin: 0 auto;
+                        display: flex;
+                        max-width: 600px;
+                        max-height: auto;
+                        margin-bottom: 10px;
+                    }
                 ',
                 'images' => "
-                    <div class='flex center'>
-                        <img class='mat'src='icons/deskmat/deskmat.png'>
+                    <div class='flex center deskmat'>
+                        <img class='mat'src='icons/deskmat/deskmat.jpg'>
                     </div>
                 ",
                 'countText' => '<p class="center"><strong>{{ COUNT }} people already raised enough for a desk mat!</strong></p>',
@@ -270,10 +279,11 @@ class Config {
                 'key' => self::SITE_TREAT,
                 'url' => 'https://donationtreats.rknight.me',
                 'title' => 'Donation treats',
+                'page_title' => 'Donate some money, get a treat',
                 'tagline' => 'Donate some money, get a treat',
                 'countText' => '<p class="center"><strong>{{ COUNT }} different rewards available!</strong></p>',
                 'formatter' => function ($data) {
-                    $exclude = ['Relay FM Digital Bundle', 'Sticker Pack + Digital Bundle', 'No More Chemo Party', 'Family Meal Card', 'Art Supplies', 'Red Wagon', 'Share of Bone Marrow Treatment', '2/3 Share of Chemotherapy Treatment'];
+                    $exclude = ['Relay Wallpapers and macOS Screensaver', 'Sticker Pack + Digital Bundle', 'No More Chemo Party', 'Family Meal Card', 'Art Supplies', 'Red Wagon', 'Share of Bone Marrow Treatment', '2/3 Share of Chemotherapy Treatment', 'New Toy for Hospital Play Areas'];
                     $count = 0;
 
                     $rewards = [];
@@ -353,13 +363,13 @@ class Config {
                     $content = "
                         <p>Add this to your page replacing the URL with your campaign url:</p>
 
-                        <pre>&lt;script src='https://septembed.rknight.me/sj.js?u=<strong>https://tiltify.com/@rknightuk/stjude2023</strong>'&gt;&lt;/script&gt;</pre>
+                        <pre>&lt;script src='https://septembed.rknight.me/sj.js?u=<strong>https://tiltify.com/@rknightuk/stjude2024</strong>'&gt;&lt;/script&gt;</pre>
                         
                         <p>Example:</p>
 
                         <br>
 
-                        <script src='/sj.js'></script>
+                        <script src='/sj.js?u=https://tiltify.com/@rknightuk/stjude2024'></script>
 
                         <p style='margin-top: 20px;'><em><small>If you get the URL wrong, the embed will fall back to using the main Relay FM campaign. If you always want to show the Relay campaign, don't pass anything to <code>u=</code>.</small></em></p>
                     ";
@@ -383,7 +393,7 @@ class Config {
                 'tagline' => 'Be a Donation Daddy today!',
                 'formatter' => function($data) {
                     return [
-                        '',
+                        "<script src='/sj.js?u=https://tiltify.com/@rknightuk/stjude2024'></script>",
                         ''
                     ];
                 },

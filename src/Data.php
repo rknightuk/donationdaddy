@@ -8,10 +8,10 @@ use Phpfastcache\Helper\Psr16Adapter;
 class Data {
   public static function campaigns()
   {
-    return json_decode(file_get_contents('./static/2023/campaigns.json'), true);
+    // return json_decode(file_get_contents('./static/2023/campaigns.json'), true);
 
-    $VANITY = '+relay-fm';
-    $SLUG = 'relay-fm-for-st-jude-2023';
+    $VANITY = '+relay-for-st-jude';
+    $SLUG = 'relay-for-st-jude-2024';
 
     $Psr16Adapter = new Psr16Adapter('Files');
     $key = 'cache_key_campaigns';
@@ -141,7 +141,7 @@ supportingCampaigns(first: $limit, after: $cursor) {
 
   public static function relay()
   {
-    return json_decode(file_get_contents('./static/2023/relay.json'), true);
+    // return json_decode(file_get_contents('./static/2023/relay.json'), true);
 
     $Psr16Adapter = new Psr16Adapter('Files');
     $key = 'cache_key_relay_campaign';
@@ -400,8 +400,8 @@ supportingCampaigns(first: $limit, after: $cursor) {
 }';
 
     $variables = [
-      'vanity' => '+relay-fm',
-      'slug' => 'relay-fm-for-st-jude-2023',
+      'vanity' => '+relay-for-st-jude',
+      'slug' => 'relay-for-st-jude-2024',
     ];
 
     $response = (new Client)->request('post', 'https://api.tiltify.com/', [

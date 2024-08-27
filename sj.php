@@ -18,7 +18,7 @@ function getRelay()
         'url' => $data['url'],
         'goal' => '$' . $data['goal'],
         'raised' => '$' . $data['raised'],
-        'percentage' => $data['percentage'],
+        'percentage' => $data['percentage'] ?? 0,
     ];
 }
 
@@ -435,8 +435,8 @@ $key = str_replace('@', '', $vanity . $slug) ?: 'relayfmmaincampaign';
 $Psr16Adapter = new Psr16Adapter('Files');
 
 // return relay always
-echo json_encode(getRelay());
-die;
+// echo json_encode(getRelay());
+// die;
 
 if (!$Psr16Adapter->has($key)) {
     if (is_null($vanity) || is_null($slug)) {
@@ -465,7 +465,7 @@ if (!$Psr16Adapter->has($key)) {
         'url' => sprintf('https://tiltify.com/%s/%s', $vanity, $slug),
         'goal' => $currency . $goal,
         'raised' => $currency . $raised,
-        'percentage' => ($goal > 0 && $raised > 0) ? number_format((($raised / $goal) * 100), 2) : null,
+        'percentage' => ($goal > 0 && $raised > 0) ? number_format((($raised / $goal) * 100), 2) : 0,
     ];
 
     $Psr16Adapter->set($key, $data, 600);
