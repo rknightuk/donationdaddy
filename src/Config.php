@@ -14,7 +14,7 @@ class Config {
     const REPLACERS = [
         [
             'find' => '{{ RELAYLINK }}',
-            'replace' => '<a href="https://stjude.tiltify.com/relay-for-st-jude">Relay for St Jude</a>',
+            'replace' => '<a href="https://relay.fm/stjude">Relay for St Jude</a>',
         ],
         [
             'find' => '{{ COUNT }}',
