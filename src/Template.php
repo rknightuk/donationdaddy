@@ -87,7 +87,7 @@ class Template {
                     }
 
                     h1 {
-                        font-size: 2em;
+                        font-size: 1.5em;
                         margin-bottom: 0;
                         font-family: 'Press Start 2P', display;
                     }
@@ -114,10 +114,10 @@ class Template {
 
                     nav.main {
                         display: grid;
-                        grid-template-columns: repeat(4, 1fr);
+                        grid-template-columns: repeat(3, 1fr);
                         grid-gap: 5px;
                         font-weight: 700;
-                        font-size: 1em;
+                        font-size: 0.7em;
                         padding: 10px;
                     }
 
@@ -125,7 +125,6 @@ class Template {
                     {
                         nav.main {
                             grid-template-columns: repeat(2, 1fr);
-                            font-size: 1em;
                         }
                     }
 
@@ -199,15 +198,17 @@ class Template {
                 <nav class='main'>
                     <a href='https://coinme.dad/dy'>Coin Me, Daddy</a>
                     <a href='https://deskmat.help'>Desk Mat Help</a>
+                    <a href='https://hathelp.rknight.me'>Hat Help</a>
                     <a href='https://donationtreats.rknight.me'>Donation Treats</a>
                     <a href='https://septembed.rknight.me'>Septembed</a>
+                    <a href='https://stjude.omg.lol'>robb x omg.lol</a>
                 </nav>
 
                 <div class='wrapper'>
                     <header>
                         <h1>$title</h1>
                         <p class='subtitle'><em>$tagline</em></p>
-                        <p class='subtitle'><small>Made by <a href='https://rknight.me/stjude'>Robb Knight</small></a></p>
+                        <p class='subtitle'><small>Made by <a href='https://stjude.omg.lol'>Robb Knight</small></a></p>
                     </header>
                         
                     <div class='content'>

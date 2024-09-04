@@ -9,6 +9,7 @@ class Config {
     const SITE_TREAT = 'treats';
     const SITE_SEPT = 'septembed';
     const SITE_DD = 'donationdaddy';
+    const SITE_500 = '500';
 
     const REPLACERS = [
         [
@@ -103,7 +104,7 @@ class Config {
                     $content = implode('', array_map(function ($c) {
                         return sprintf(
                             '<a class="sj-container" href="%s" target="_blank">
-                                <p class="sj-title" style="margin-top: 0px; margin-bottom: 5px; font-weight: bold;">%s<br style="margin-bottom:5px;"></p>
+                                <p class="sj-title" style="margin-top: 0px; margin-bottom: 5px; font-weight: bold;overflow: hidden;">%s<br style="margin-bottom:5px;"></p>
                             </a>',
                             $c['url'],
                             $c['name'] . ' - @' . $c['user'],
@@ -164,7 +165,7 @@ class Config {
                 'key' => self::SITE_DESKMAT,
                 'url' => 'https://deskmat.help',
                 'title' => 'Desk Mat Help',
-                'page_title' => 'Help someone out who is close to getting a Relay FM for St Jude desk mat',
+                'page_title' => 'Help someone out who is close to getting a Relay for St Jude desk mat',
                 'tagline' => 'Help someone out who is close to getting a {{ RELAYLINK }} desk mat',
                 'formatter' => function ($data) {
                     $count = 0;
@@ -193,7 +194,7 @@ class Config {
                         return
                         sprintf(
                             '<a class="sj-container" href="%s" target="_blank">
-                                <p class="sj-title" style="margin-top: 0px; margin-bottom: 5px; font-weight: bold;">%s<br style="margin-bottom:5px;"></p>
+                                <p class="sj-title" style="margin-top: 0px; margin-bottom: 5px; font-weight: bold;overflow: hidden;">%s<br style="margin-bottom:5px;"></p>
                                 <p class="sj-subtitle" style="margin-top: 0px; margin-bottom: 10px;">$%s needed</p>
                                 <div style="position: relative; height: 25px; background: rgba(189, 195, 199, 0.6); border-radius: 15px;">
                                 <div class="sj-progress" style="width: %s;"></div>
@@ -211,7 +212,7 @@ class Config {
 
                     return [
                         $content,
-                        $count,
+                        $count - 1,
                     ];
                 },
                 'styles' => '
@@ -272,6 +273,121 @@ class Config {
                     </div>
                 ",
                 'countText' => '<p class="center"><strong>{{ COUNT }} people already raised enough for a desk mat!</strong></p>',
+                'emptyState' => '',
+                'scripts' => '',
+            ],
+            self::SITE_500 => [
+                'key' => self::SITE_500,
+                'url' => 'https://hathelp.rknight.me',
+                'title' => 'Hat Help',
+                'page_title' => 'Help someone out who is close to getting a Relay for St Jude hat and tumbler',
+                'tagline' => 'Help someone out who is close to getting a {{ RELAYLINK }} hat and tumbler',
+                'formatter' => function ($data) {
+                    $count = 0;
+                    $data = array_filter($data, function ($d) use (&$count) {
+                        if ($d['raised'] >= 500) $count++;
+                        return $d['raised'] < 500;
+                    });
+
+                    $data = array_map(function($d) {
+                        $raised = (float) $d['raised'];
+                        $goal = $d['goal'];
+                        $d['raised'] = $raised;
+                        $d['goal'] = $goal;
+                        $d['percentage'] = ($goal > 0 && $raised > 0) ? number_format((($raised / 500) * 100), 2) : null;
+                        $d['left'] = number_format(500 - $raised, 2);
+
+                        return $d;
+                    }, $data);
+
+                    usort($data, function ($a, $b) {
+                        if ($a['raised'] == $b['raised']) return 0;
+                        return ($a['raised'] > $b['raised']) ? -1 : 1;
+                    });
+
+                    $content = implode('', array_map(function ($c) {
+                        return
+                        sprintf(
+                            '<a class="sj-container" href="%s" target="_blank">
+                                <p class="sj-title" style="margin-top: 0px; margin-bottom: 5px; font-weight: bold;overflow: hidden;">%s<br style="margin-bottom:5px;"></p>
+                                <p class="sj-subtitle" style="margin-top: 0px; margin-bottom: 10px;">$%s needed</p>
+                                <div style="position: relative; height: 25px; background: rgba(189, 195, 199, 0.6); border-radius: 15px;">
+                                <div class="sj-progress" style="width: %s;"></div>
+                                <div class="sj-progress-text"> $%s • %s</div>
+                                </div>
+                            </a>',
+                            $c['url'],
+                            $c['name'],
+                            number_format(500 - $c['raised'], 2),
+                            ($c['percentage'] ?? 0) . '%',
+                            $c['raised'],
+                            ($c['percentage'] ?? 0) . '%',
+                        );;
+                    }, $data));
+
+                    return [
+                        $content,
+                        $count - 1,
+                    ];
+                },
+                'styles' => '
+                    .sj-container {
+                        padding: 10px;
+                        border-radius: 10px;
+                        display: block;
+                        text-decoration: none;
+                        transition:  background 0.5s ease;
+                        background:  #FDE18C;
+                        color: black;
+                        border: 1px solid #FFC52C;
+                        margin-bottom: 10px;
+                    }
+
+                    .sj-container:hover {
+                        background: #FDDB73;
+                    }
+
+                    .sj-subtitle {
+                        font-size: 0.9em;
+                    }
+                    .sj-progress {
+                        box-sizing:border-box;
+                        padding-left:10px;
+                        height:100%;
+                        background:black;
+                        border-top-left-radius:15px;
+                        border-bottom-left-radius:15px;
+                        display:flex;
+                        align-items: center;
+                        color: white;
+                        max-width:100%;
+                    }
+
+                    .sj-progress-text {
+                        font-size: 0.8em;
+                        position: absolute;
+                        top: 3px;
+                        right: 0;
+                        left: 5px;
+                        bottom: 0;
+                        color: white;
+                        text-align: left;
+                    }
+
+                    .deskmat {
+                        margin: 0 auto;
+                        display: flex;
+                        max-width: 400px;
+                        max-height: auto;
+                        margin-bottom: 10px;
+                    }
+                ',
+                'images' => "
+                    <div class='flex center deskmat'>
+                        <img class='mat'src='icons/500/hat.jpg'>
+                    </div>
+                ",
+                'countText' => '<p class="center"><strong>{{ COUNT }} people already raised enough for a hat and tumbler!</strong></p>',
                 'emptyState' => '',
                 'scripts' => '',
             ],
@@ -357,7 +473,7 @@ class Config {
                 'key' => self::SITE_SEPT,
                 'url' => 'https://septembed.rknight.me',
                 'title' => 'Septembed',
-                'page_title' => 'Embed your Relay FM for St Jude campaign on your website', 
+                'page_title' => 'Embed your Relay for St Jude campaign on your website', 
                 'tagline' => 'Embed your {{ RELAYLINK }} campaign on your website', 
                 'formatter' => function($data) {
                     $content = "
@@ -371,7 +487,7 @@ class Config {
 
                         <script src='/sj.js?u=https://tiltify.com/@rknightuk/stjude2024'></script>
 
-                        <p style='margin-top: 20px;'><em><small>If you get the URL wrong, the embed will fall back to using the main Relay FM campaign. If you always want to show the Relay campaign, don't pass anything to <code>u=</code>.</small></em></p>
+                        <p style='margin-top: 20px;'><em><small>If you get the URL wrong, the embed will fall back to using the main Relay campaign. If you always want to show the Relay campaign, don't pass anything to <code>u=</code>.</small></em></p>
                     ";
 
                     return [

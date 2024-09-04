@@ -20,6 +20,9 @@ switch ($site) {
     case 'septembed.rknight.me':
         $key = Config::SITE_SEPT;
         break;
+    case 'hathelp.rknight.me':
+        $key = Config::SITE_500;
+        break;
     default:
         $key = Config::SITE_DD;
 }
