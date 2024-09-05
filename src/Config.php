@@ -509,7 +509,17 @@ class Config {
                 'tagline' => 'Be a Donation Daddy today!',
                 'formatter' => function($data) {
                     return [
-                        "<script src='/sj.js?u=https://tiltify.com/@rknightuk/stjude2024'></script>",
+                        "
+                            <script src='/sj.js?u=https://tiltify.com/@rknightuk/stjude2024'></script>
+                            <div style='display: grid;grid-template-columns: repeat(3, 1fr);grid-gap:10px;margin-top:10px;'>
+                                <a href='https://coinme.dad/dy'><img src='icons/coinme/preview.png'></a>
+                                <a href='https://deskmat.help'><img src='icons/deskmat/preview.png'></a>
+                                <a href='https://hathelp.rknight.me'><img src='icons/500/preview.png'></a>
+                                <a href='https://donationtreats.rknight.me'><img src='icons/treats/preview.png'></a>
+                                <a href='https://septembed.rknight.me'><img src='icons/septembed/preview.png'></a>
+                                <a href='https://stjude.omg.lol'><img src='icons/robbxomg.png'></a>
+                            </div>
+                        ",
                         ''
                     ];
                 },
