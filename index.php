@@ -11,6 +11,9 @@ switch ($site) {
     case 'coinme.dad':
         $key = Config::SITE_COINME;
         break;
+    case 'coin.rknight.me':
+        $key = Config::SITE_COINME;
+        break;
     case 'deskmat.help':
         $key = Config::SITE_DESKMAT;
         break;
