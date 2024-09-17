@@ -171,7 +171,7 @@ class Config {
                     $count = 0;
                     $data = array_filter($data, function ($d) use (&$count) {
                         if ($d['raised'] >= 250) $count++;
-                        return $d['raised'] < 250 && $d['raised'] >= 1;
+                        return $d['raised'] < 250;
                     });
 
                     $data = array_map(function($d) {
@@ -286,7 +286,7 @@ class Config {
                     $count = 0;
                     $data = array_filter($data, function ($d) use (&$count) {
                         if ($d['raised'] >= 500) $count++;
-                        return $d['raised'] < 500 && $d['raised'] >= 250;
+                        return $d['raised'] < 500;
                     });
 
                     $data = array_map(function($d) {
