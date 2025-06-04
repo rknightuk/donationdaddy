@@ -1,0 +1,86 @@
+{
+  "name": "Relay for St. Jude",
+  "user": "Relay FM",
+  "description": "Join Relay in supporting the life-saving work of St. Jude.",
+  "url": "https://relay.experience.stjude.org/",
+  "avatar": "https://assets.tiltify.com/uploads/team_event/avatar/00e4cb26-94fb-456a-bc73-ed9237a1be02/blob-4e189635-4342-4cbb-a29f-d34fd9727243.png",
+  "raised": "1079373.84",
+  "goal": "725000",
+  "percentage": "148.88",
+  "milestones": [
+    {
+      "name": "Casey's Dream MacBook",
+      "amount": "650000"
+    },
+    {
+      "name": "Coin Flip University with Jason",
+      "amount": "675000"
+    },
+    {
+      "name": "Pin the glasses on Casey",
+      "amount": "725000"
+    },
+    {
+      "name": "$3 Million Raised Since 2019",
+      "amount": "17067.54"
+    },
+    {
+      "name": "Stephen Builds LEGO Lunar Rover",
+      "amount": "75000"
+    },
+    {
+      "name": "Myke Builds LEGO Concorde",
+      "amount": "100000"
+    },
+    {
+      "name": "Stephen Rebuilds the MacBook",
+      "amount": "420000"
+    },
+    {
+      "name": "Stream: Role Reversal: Jay & Kathy Swap Jobs",
+      "amount": "500000"
+    },
+    {
+      "name": "Stream: Mikah Hosts D&D",
+      "amount": "575000"
+    },
+    {
+      "name": "Stream: Cortex Brand Prototypes - Show & Tell",
+      "amount": "600000"
+    },
+    {
+      "name": "A Thoroughly Considered F1 Ranking",
+      "amount": "50000"
+    },
+    {
+      "name": "Unlock MEGA WOODBLOCK STACKIN' GAME @ Podcastathon",
+      "amount": "150000"
+    },
+    {
+      "name": "Unlock Relay (no FM) Races @ Podcastathon",
+      "amount": "200000"
+    },
+    {
+      "name": "Unlock \"Co-Founders Touch Things\" @ Podcastathon",
+      "amount": "250000"
+    },
+    {
+      "name": "Stephen Upgrades an Apple ][",
+      "amount": "350000"
+    }
+  ],
+  "rewards": [
+    {
+      "name": "Relay Wallpapers and macOS Screensaver",
+      "description": "Make an individual gift of $60 or more to earn exclusive wallpapers and macOS screensaver.",
+      "image": "https://assets.tiltify.com/uploads/reward/image/251883/blob-c5a06fda-1a09-4b2e-971a-4bf977450603.png",
+      "amount": "60"
+    },
+    {
+      "name": "Sticker Pack + Digital Bundle",
+      "description": "Make an individual gift of $100 or more to earn the sticker pack plus the entire digital bundle.",
+      "image": "https://assets.tiltify.com/uploads/reward/image/251884/blob-d1ceb949-f9c3-4620-ad36-7dee8fae49cd.png",
+      "amount": "100"
+    }
+  ]
+}
