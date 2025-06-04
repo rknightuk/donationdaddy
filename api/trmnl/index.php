@@ -58,6 +58,7 @@ $data = [
 ];
 
 if (is_null($vanity) || is_null($slug)) {
+    $data['leaderboards'] = Data::campaigns();
     echo json_encode($data);
     die;
 }
@@ -65,6 +66,7 @@ if (is_null($vanity) || is_null($slug)) {
 $campaignData = Data::getCampaignData($vanity, $slug);
 
 if (isset($campaignData['errors'])) {
+    $data['leaderboards'] = Data::campaigns();
     echo json_encode($data);
     die;
 }

@@ -551,6 +551,14 @@ supportingCampaigns(first: $limit, after: $cursor) {
         }, $d['node']['rewards']),
       ];
     }, $data);
+    
+    usort($data, function ($a, $b) {
+        if ($a['raised'] == $b['raised']) return 0;
+        return ($a['raised'] > $b['raised']) ? -1 : 1;
+    });
+
+    unset($data[0]);
+    $data = array_values($data);
 
     $Psr16Adapter->set($key, $data, 300);
 
