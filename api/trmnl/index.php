@@ -25,9 +25,12 @@ function getRelay($devMode = false)
     }
 
     if ($devMode) {
+        $data['goal'] = 100000;
+        $data['raised'] = 45670;
+        $data['percentage'] = 45.67;
         $nextMilestone = [
             'name' => 'Big Milestone',
-            'amount' => 1000,
+            'amount' => 50000,
         ];
     }
 
@@ -84,10 +87,9 @@ foreach ($milestones as $milestone) {
 }
 
 if ($devMode) {
-    $nextMilestone = [
-        'name' => 'Test Milestone',
-        'amount' => ['value' => 1000],
-    ];
+    $goal = 20000;
+    $raised = 22345;
+    $nextMilestone = null;
 }
 
 $formatted = [
