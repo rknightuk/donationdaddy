@@ -48,8 +48,20 @@ function getRelay($devMode = false)
     ];
 }
 
-$slug = $_GET['slug'] ?? null;
-$vanity = $_GET['vanity'] ?? null;
+
+// e.g. https://tiltify.com/@rknightuk/stjude2024
+$url = $_GET['url'] ?? null;
+$vanity = null;
+$slug = null;
+
+if ($url) {
+    $urlBits = parse_url($url);
+    $parts = explode('/', trim($urlBits['path'], '/'));
+
+    $vanity = $parts[0];
+    $slug = $parts[1];
+}
+
 $devMode = $_GET['dev_mode'] ?? null;
 
 $data = [
