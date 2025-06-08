@@ -16,4 +16,10 @@ $data = array_map(function($campaign) {
 
 usort($data, fn($a, $b) => strcmp($a[0], $b[0]));
 
-echo json_encode($data);
+$newData = [];
+
+foreach ($data as $d) {
+    $newData[] = [$d[0] => $d[1]];
+}
+
+echo json_encode($newData);
