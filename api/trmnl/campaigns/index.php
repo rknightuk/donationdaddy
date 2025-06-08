@@ -1,0 +1,19 @@
+<?php
+
+require '../../../vendor/autoload.php';
+
+use DonationDaddy\Data;
+
+header('Access-Control-Allow-Origin: *');
+header("Content-Type: application/json");
+
+$data = array_map(function($campaign) {
+    return [
+        '@' . $campaign['user'] . ' / ' . $campaign['name'],
+        $campaign['url'],
+    ];
+}, Data::campaigns());
+
+usort($data, fn($a, $b) => strcmp($a[0], $b[0]));
+
+echo json_encode($data);
