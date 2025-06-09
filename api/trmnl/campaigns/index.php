@@ -5,7 +5,6 @@ require '../../../vendor/autoload.php';
 use DonationDaddy\Data;
 
 header('Access-Control-Allow-Origin: *');
-header("Referrer-Policy: unsafe-url");
 header("Content-Type: application/json");
 
 $data = array_map(function($campaign) {
