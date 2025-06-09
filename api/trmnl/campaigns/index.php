@@ -17,7 +17,9 @@ $data = array_map(function($campaign) {
 
 usort($data, fn($a, $b) => strcmp($a[0], $b[0]));
 
-$newData = [];
+$newData = [
+    ['None' => null]
+];
 
 foreach ($data as $d) {
     $newData[] = [$d[0] => $d[1]];
