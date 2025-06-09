@@ -4,6 +4,7 @@ require '../../../vendor/autoload.php';
 
 use DonationDaddy\Data;
 
+header('Access-Control-Allow-Headers: *');
 header("Content-Type: application/json");
 
 $data = array_map(function($campaign) {
