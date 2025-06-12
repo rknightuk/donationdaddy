@@ -10,7 +10,7 @@ header("Content-Type: application/json");
 
 $data = array_map(function($campaign) {
     return [
-        '@' . $campaign['user'] . ' / ' . $campaign['name'],
+        $campaign['user'] . ' / ' . $campaign['name'],
         $campaign['url'],
     ];
 }, Data::campaigns());
