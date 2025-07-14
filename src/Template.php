@@ -89,7 +89,6 @@ class Template {
                     h1 {
                         font-size: 1.5em;
                         margin-bottom: 0;
-                        font-family: 'Press Start 2P', display;
                     }
 
                     .subtitle {
@@ -132,7 +131,6 @@ class Template {
                         text-align: center;
                         padding: 5px;
                         text-decoration: none;
-                        font-family: 'Press Start 2P', display;
                         border: 2px solid black;
                         display: flex;
                         align-items: center;
@@ -187,7 +185,7 @@ class Template {
                 <link rel='icon' type='image/x-icon' href='/icons/$key/favicon.ico'>
 
                 <link rel='preconnect' href='https://fonts.bunny.net'>
-                <link href='https://fonts.bunny.net/css?family=atkinson-hyperlegible:400,400i,700,700i|press-start-2p:400' rel='stylesheet' />
+                <link href='https://fonts.bunny.net/css?family=atkinson-hyperlegible:400,400i,700,700i' rel='stylesheet' />
 
                 <script src='https://cdn.usefathom.com/script.js' data-site='OQIRZXWS' defer></script>
 
