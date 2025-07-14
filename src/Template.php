@@ -224,6 +224,7 @@ class Template {
 
                     <footer>
                         <a href='https://donationdaddy.rknight.me'><img src='icons/donationdaddy/DonationDaddy.png' height='50'></a>
+
                     </footer>
                 </div>
             </body>
